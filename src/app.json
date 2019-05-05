@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/home/main",
+    "pages/news/main",
+    "pages/me/main",
+    "pages/detail/main",
+    "pages/article-detail/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "卓助创造",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/main",
+        "text": "主页",
+        "iconPath": "static/images/icon/index.png",
+        "selectedIconPath": "static/images/icon/index-selected.png"
+      },
+      {
+        "pagePath": "pages/news/main",
+        "text": "资讯",
+        "iconPath": "static/images/icon/news.png",
+        "selectedIconPath": "static/images/icon/news-selected.png"
+      },
+      {
+        "pagePath": "pages/me/main",
+        "text": "个人中心",
+        "iconPath": "static/images/icon/me.png",
+        "selectedIconPath": "static/images/icon/me-selected.png"
+      }
+    ]
+  }
+}
