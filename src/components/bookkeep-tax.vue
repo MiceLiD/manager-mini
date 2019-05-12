@@ -1,16 +1,16 @@
 <template>
   <div class="container">
     <div class="item-title">
-      营业执照注册
+      记账报税
     </div>
     <div class="item-category">
       <radio-group @change="handleOnChange">
         <div class="radio" v-for="(item, index) in items" :key="index">
           <div class="radio-value">
-            {{ item.value }}
+            {{ item.name }}
           </div>
           <div class="radio-radio">
-            <radio :value="item.name" />
+            <radio :value="item.value" />
           </div>
         </div>
       </radio-group>
@@ -42,26 +42,23 @@ export default {
   data() {
     return {
       items: [
-        {name: '个体工商户', value: '个体工商户'},
-        {name: '有限公司', value: '有限公司'},
-        {name: '股份公司', value: '股份公司'},
-        {name: '分公司', value: '分公司'},
-        {name: '其他', value: '其他'}
+        {name: '小规模纳税人1500/年', value: '1500'},
+        {name: '一般纳税人1500/年', value: '1-1500'},
+        {name: '小规模纳税人4000/5年', value: '5-4000'},
+        {name: '一般纳税人15000/5年', value: '5-15000'}
       ],
       process: [
-        '① 在线下单',
-        '② 客服对接',
-        '③ 资料交接',
-        '④ 提交材料',
-        '⑤ 领证完工'
+        '① 票据收取',
+        '② 会计记账',
+        '③ 精密审查',
+        '④ 纳税申报'
       ],
-      curVal: '个体工商户',
+      curVal: '1500',
       processData: {
-        '个体工商户': '个体工商户',
-        '有限公司': '有限公司',
-        '股份公司': '股份公司',
-        '分公司': '分公司',
-        '其他': '其他'
+        '1500': '小规模纳税人/年 材料',
+        '1-1500': '一般纳税人/年 材料',
+        '5-4000': '小规模纳税人/5年 材料',
+        '5-15000': '一般纳税人15000/5年 材料',
       }
     }
   },

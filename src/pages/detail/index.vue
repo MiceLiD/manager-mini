@@ -8,8 +8,12 @@
     }">
     </div>
     <div class="detail-content">
-      {{ pageDetail.title }}
-      <RegisterCompany></RegisterCompany>
+      <template v-if="pageDetail.title === '注册公司'">
+        <RegisterCompany />
+      </template>
+      <template v-if="pageDetail.title === '记账报税'">
+        <BookkeepTax />
+      </template>
     </div>
     <div class="detail-btns">
       <button @click="handleOnAdvidory">在线咨询</button>
@@ -20,6 +24,7 @@
 
 <script>
 import RegisterCompany from '@/components/register-company.vue'
+import BookkeepTax from '@/components/bookkeep-tax.vue'
 export default {
   data () {
     return {
@@ -50,7 +55,8 @@ export default {
     }
   },
   components: {
-    RegisterCompany
+    RegisterCompany,
+    BookkeepTax
   }
 }
 </script>
@@ -67,10 +73,9 @@ export default {
     height: 133px;
   }
   .detail-content {
-    padding: 20px;
-    border: 1px dashed rgba(0,0,0,.1);
+    border-top: 1rpx dashed rgba(0,0,0,.1);
+    border-bottom: 1rpx dashed rgba(0,0,0,.1);
     flex: 1;
-    text-align: center;
     overflow: scroll;
   }
   .detail-btns {
