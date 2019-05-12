@@ -1,4 +1,4 @@
-# manager-mini
+# mpvue-project
 
 > A Mpvue project
 
@@ -6,11 +6,11 @@
 
 ``` bash
 # 初始化项目
-vue init mpvue/mpvue-quickstart myproject
-cd myproject
+git clone git@github.com:MiceLiD/manager-mini.git
+cd manager-mini
 
 # 安装依赖
-yarn
+npm i
 
 # 开发时构建
 npm dev
